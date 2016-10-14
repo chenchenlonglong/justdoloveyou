@@ -10,6 +10,7 @@ namespace app\controllers;
 use TopClient;
 use yii\web\Controller;
 use Yii;
+use AlibabaAliqinFcSmsNumSendRequest;
 
 class SmsController extends Controller
 {
