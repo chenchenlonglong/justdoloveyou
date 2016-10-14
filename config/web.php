@@ -8,7 +8,7 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-//    'defaultRoute' => 'index', //默认控制器
+    'defaultRoute' => 'index', //默认控制器
     'modules'=>[
         'admin'=>['class' => 'app\modules\admin\Admin']
     ],
