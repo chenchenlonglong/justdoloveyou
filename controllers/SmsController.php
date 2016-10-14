@@ -22,7 +22,7 @@ class SmsController extends Controller
         $this->secertkey=Yii::$app->params["ALIDAYU"]["APP_SERECT"];
     }
 
-    public  function ActionSend_sms(){
+    public  function actionSend_sms(){
         $alidayu= new TopClient();
         $req=new AlibabaAliqinFcSmsNumSendRequest;
         $req->setExtend("123456");
