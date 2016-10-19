@@ -7,13 +7,29 @@
 
 namespace app\controllers;
 
-
+use yii\web\ConflictHttpException;
 use yii\web\Controller;
+use Yii;
+use yii\web\HttpException;
+use yii\web\NotAcceptableHttpException;
+use yii\web\NotFoundHttpException;
 
 class IndexController extends  Controller
 {
     public  function  actionIndex(){
 
-        throw new \yii\web\BadRequestHttpException;
+        //加解密方法
+        $data="你好";
+        $msg=base64_encode(Yii::$app->getSecurity()->encryptByPassword($data,"123456"));
+        var_dump($msg);
+        $msg=Yii::$app->security->decryptByPassword(base64_decode($msg),"123456");
+        var_dump($msg);
+
+        Yii::$app->id;
+    }
+
+    public function  actionRequestAll(){
+        throw new  NotAcceptableHttpException;
+//            throw new NotFoundHttpException;
     }
 }

@@ -33,6 +33,13 @@ $config = [
             // for the mailer to send real emails.
             'useFileTransport' => true,
         ],
+        "controllerMap"=>[
+
+            "chenlong"=>[
+                "class"=>"app\controller\IndexController",
+                "enableCsrfValidation"=>false,
+            ],
+        ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
