@@ -9,6 +9,13 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'defaultRoute' => 'site', //默认控制器
+    //重命名控制器名称
+    "controllerMap"=>[
+        "chenlong"=>[
+            "class"=>"app\controllers\IndexController",
+            "enableCsrfValidation"=>false,
+        ],
+    ],
     'modules'=>[
         'admin'=>['class' => 'app\modules\admin\Admin']
     ],
@@ -32,13 +39,6 @@ $config = [
             // 'useFileTransport' to false and configure a transport
             // for the mailer to send real emails.
             'useFileTransport' => true,
-        ],
-        "controllerMap"=>[
-
-            "chenlong"=>[
-                "class"=>"app\controller\IndexController",
-                "enableCsrfValidation"=>false,
-            ],
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
