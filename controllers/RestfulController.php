@@ -7,9 +7,11 @@
 
 namespace app\controllers;
 
+use app\models\Restful;
 use yii\rest\ActiveController;
 
 class RestfulController extends  ActiveController
 {
-    public  $modelClass="app/models/User";
+    public  $modelClass="app\models\Restful";
+
 }
