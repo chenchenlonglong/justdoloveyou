@@ -25,7 +25,6 @@ class IndexController extends  Controller
         $msg=Yii::$app->security->decryptByPassword(base64_decode($msg),"123456");
         var_dump($msg);
 
-        Yii::$app->id;
     }
 
     public function  actionRequestAll(){

@@ -9,6 +9,8 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'defaultRoute' => 'site', //默认控制器
+
+
     //重命名控制器名称
     "controllerMap"=>[
         "chenlong"=>[
@@ -50,16 +52,17 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
-        /*
+        
+        //restfulapi美化url
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                ['class' => 'yii\rest\UrlRule', 'controller' => 'user'],
             ],
         ],
-        */
+
     ],
-    'params' => $params,
 ];
 
 if (YII_ENV_DEV) {
