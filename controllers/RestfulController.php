@@ -7,7 +7,7 @@
 
 namespace app\controllers;
 
-use app\models\Restful;
+
 use yii\rest\ActiveController;
 
 class RestfulController extends  ActiveController
