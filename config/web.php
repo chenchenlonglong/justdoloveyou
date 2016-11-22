@@ -35,10 +35,10 @@ $config = [
 //            'port' =>6400,
 //            'database' => 0,
 //        ],
-        "session"=>[
-            "class"=>"yii\web\Dbsession",
-            "sessionTable"=>"my_session",
-        ],
+//        "session"=>[
+//            "class"=>"yii\web\Dbsession",
+//            "sessionTable"=>"my_session",
+//        ],
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
