@@ -29,12 +29,12 @@ $config = [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
-        'redis' => [
-            'class' => 'yii\redis\Connection',
-            'hostname' => '112.126.90.51',
-            'port' =>6400,
-            'database' => 0,
-        ],
+//        'redis' => [
+//            'class' => 'yii\redis\Connection',
+//            'hostname' => '112.126.90.51',
+//            'port' =>6400,
+//            'database' => 0,
+//        ],
         "session"=>[
             "class"=>"yii\web\Dbsession",
             "sessionTable"=>"my_session",
