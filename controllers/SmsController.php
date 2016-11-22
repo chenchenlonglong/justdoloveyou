@@ -18,7 +18,6 @@ class SmsController extends Controller
 
 
     public function actionSend_sms(){
-        return false;
         $params=Yii::$app->params["ALIDAYU"];
         $msg=Yii::$app->request->get("xuemei","");
         $alidayu= new AlidayuAdapter( $params["APP_KEY"],$params["APP_SERECT"]);

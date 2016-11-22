@@ -57,4 +57,13 @@ return array (
       '@yii/faker' => $vendorDir . '/yiisoft/yii2-faker',
     ),
   ),
+    'yiisoft/yii2-curl'=>
+    array(
+        'name'=>'yiisoft/yii2-faker',
+        'version'=>'2.2.0.0',
+        'alias'=>
+        array(
+          '@yii/curl'=>$vendorDir.'/yiisoft/yii2-curl',
+        )
+    ),
 );
