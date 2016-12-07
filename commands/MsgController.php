@@ -35,6 +35,7 @@ class MsgController extends  Controller
                 $num_3++;
             }
         }
+        echo  date("Y-m-d H:i:s")."\n";
         echo "最大红包的次数:" . $num_1 . "\n";
         echo "普通红包的次数:" . $num_2 . "\n";
         echo "优惠券的次数:" . $num_3 . "\n";
