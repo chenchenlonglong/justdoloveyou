@@ -26,13 +26,13 @@ class MsgController extends  Controller
             $result = $curl->get("http://test.order.sochepiao.com/index.php?r=trip/send_bouns&msign=leyou@hcp");
             $msg[] = $result;
             if ($result == 1) {
-                ++$num_1;
+                $num_1++;
             }
             if ($result == 2) {
-                ++$num_2;
+                $num_2++;
             }
             if ($result == 3) {
-                ++$num_3;
+                $num_3++;
             }
         }
         echo "最大红包的次数:" . $num_1 . "<br/>";
