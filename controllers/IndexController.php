@@ -7,6 +7,7 @@
 
 namespace app\controllers;
 
+use yii\curl\Curl;
 use yii\web\ConflictHttpException;
 use yii\web\Controller;
 use Yii;
@@ -352,5 +353,4 @@ class IndexController extends  Controller
     $nowday=$mten[$everymonth[$j][14]].$mtwelve[$everymonth[$j][15]]."年 ".$nlmon.$nlday;
     return $nowday;
     }
-
 }

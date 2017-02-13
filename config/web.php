@@ -62,15 +62,15 @@ $config = [
                 ],
             ],
         ],
-        //restfulapi美化url
-        'urlManager' => [
-            'enablePrettyUrl' => true, //美化url
-            'showScriptName' => true, //隐藏index.php
-            'enableStrictParsing' => false, //要求网址严格匹配，需要输入rules。为false时不需要
-            'rules' => [
-                ['class' => 'yii\rest\UrlRule', 'controller' => 'restful'],
-            ],
-        ],
+//        //restfulapi美化url
+//        'urlManager' => [
+//            'enablePrettyUrl' => true, //美化url
+//            'showScriptName' => true, //隐藏index.php
+//            'enableStrictParsing' => false, //要求网址严格匹配，需要输入rules。为false时不需要
+//            'rules' => [
+//                ['class' => 'yii\rest\UrlRule', 'controller' => 'restful'],
+//            ],
+//        ],
 
     ],
 ];
