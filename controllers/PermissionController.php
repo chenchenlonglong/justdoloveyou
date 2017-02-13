@@ -10,8 +10,11 @@ namespace app\controllers;
 
 class PermissionController extends BaseController
 {
-    public  function  actionCreate_permission(){
+
+    public  function  actionCreate_permission($name){
             $auth = \Yii::$app->authManager;
-            var_dump($auth);
+            $createPost = $auth->createPermission($name);
+           $createPost->description = '创建了 ' . $name. ' 权限';
+        $auth->add($createPost);
     }
 }
