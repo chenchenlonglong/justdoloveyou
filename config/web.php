@@ -10,14 +10,6 @@ $config = [
     'bootstrap' => ['log'],
     'defaultRoute' => 'site', //默认控制器
 
-    'authManager'=>[
-        'class' => 'yii\rbac\DbManager',
-        'itemTable'=>"auth_ item",
-        'assignmentTable'=>'auth_assignment',
-        'itemChildTable'=>'auth_item_child'
-    ],
-
-
     //重命名控制器名称
     "controllerMap"=>[
         "chenlong"=>[
