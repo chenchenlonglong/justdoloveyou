@@ -22,9 +22,9 @@ class SiteController extends Controller
                 'only' => ['logout'],
                 'rules' => [
                     [
-                        'actions' => ['logout'],
+                        'actions' => ['logout','captcha'],
                         'allow' => true,
-                        'roles' => ['@'],
+                        'roles' => ['@','?'],
                     ],
                 ],
             ],
@@ -49,6 +49,11 @@ class SiteController extends Controller
             'captcha' => [
                 'class' => 'yii\captcha\CaptchaAction',
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
+                'height'=>40,
+                'width'=>80,
+                "maxLength"=>5,
+                'minLength'=>1,
+                'offset'=>-1,
             ],
         ];
     }
