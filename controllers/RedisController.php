@@ -51,6 +51,7 @@ class RedisController extends Controller
         $redis = Yii::$app->redis;
         $redis->zadd('6400_chen_03', 1, 'chen');
         $redis->zadd('6400_chen_03', 2, 'chen_2');
+        
         $redis->zadd('6400_chen_03', 3, 'chen_2');
         $data = $redis->zrange('6400_chen_03', 0, 4);
         var_dump($data);
