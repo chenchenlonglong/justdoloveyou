@@ -1,7 +1,6 @@
 <?php
 
 $params = require(__DIR__ . '/params.php');
-
 Yii::$classMap['Functions'] = '@app/libs/Functions.php';
 
 $config = [
@@ -28,12 +27,12 @@ $config = [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
-//        'redis' => [
-//            'class' => 'yii\redis\Connection',
-//            'hostname' => '112.126.90.51',
-//            'port' =>6400,
-//            'database' => 0,
-//        ],
+        'redis' => [
+            'class' => 'yii\redis\Connection',
+            'hostname' => '120.132.70.111',
+            'port' =>6400,
+            'database' => 0,
+        ],
 //        "session"=>[
 //            "class"=>"yii\web\Dbsession",
 //            "sessionTable"=>"my_session",
@@ -47,10 +46,20 @@ $config = [
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
-            // send all mails to a file by default. You have to set
-            // 'useFileTransport' to false and configure a transport
-            // for the mailer to send real emails.
-            'useFileTransport' => true,
+            'useFileTransport' =>false,//这句一定有，false发送邮件，true只是生成邮件在runtime文件夹下，不发邮件
+            'transport' => [
+                'class' => 'Swift_SmtpTransport',
+                'host' => 'smtp.163.com',  //每种邮箱的host配置不一样
+                'username' => 'php_chen@163.com',
+                'password' => 'CHENlong9208',
+                'port' => '25',
+                'encryption' => 'tls',
+
+            ],
+            'messageConfig'=>[
+                'charset'=>'UTF-8',
+                'from'=>['php_chen@163.com'=>'justdoloveyou']
+            ],
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
@@ -61,6 +70,7 @@ $config = [
                 ],
             ],
         ],
+
 //        //restfulapi美化url
 //        'urlManager' => [
 //            'enablePrettyUrl' => true, //美化url
@@ -71,7 +81,9 @@ $config = [
 //            ],
 //        ],
 
+
     ],
+    'params' => $params,
 ];
 
 if (YII_ENV_DEV) {
